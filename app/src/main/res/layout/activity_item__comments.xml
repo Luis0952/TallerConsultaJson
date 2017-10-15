@@ -133,10 +133,10 @@
                                     android:layout_height="wrap_content"
                                     android:src="@drawable/icons8_casa_96"/>
                                 <TextView
-                                    android:id="@+id/id_tv_title"
+                                    android:id="@+id/id_tv_body_comments"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Title"
+                                    android:text="BodyComments"
                                     android:textSize="12sp"
                                     android:textStyle="bold"
                                     android:layout_toRightOf="@id/img_eye"
@@ -152,7 +152,7 @@
                                     android:layout_height="wrap_content"
                                     android:src="@drawable/icons8_conectar_desarrollar_96"/>
                                 <TextView
-                                    android:id="@+id/id_tv_body"
+                                    android:id="@+id/id_tv_email_comments"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Body"

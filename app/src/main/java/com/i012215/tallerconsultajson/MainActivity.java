@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadData() {
         if (isOnLine()){
-            TaskUser taskAlbum = new TaskUser();
-            taskAlbum.execute("https://jsonplaceholder.typicode.com/users");
+            TaskUser taskUser = new TaskUser();
+            taskUser.execute("https://jsonplaceholder.typicode.com/users");
         }else {
             Toast.makeText(this, "Sin conexion", Toast.LENGTH_SHORT).show();
         }
@@ -113,5 +113,5 @@ public class MainActivity extends AppCompatActivity {
 
             progressBarUser.setVisibility(View.GONE);
         }
-        }
+    }
 }

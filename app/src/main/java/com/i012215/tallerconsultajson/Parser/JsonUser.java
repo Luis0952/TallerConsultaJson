@@ -31,7 +31,7 @@ public class JsonUser {
 
             userDetail.setId_user(item.getInt("id"));
             userDetail.setName(item.getString("name"));
-            userDetail.setAddress(addressItem.getString("address"));
+            userDetail.setAddress(addressItem.getString("city"));
             userDetail.setUsername(companyItem.getString("name"));
 
 
