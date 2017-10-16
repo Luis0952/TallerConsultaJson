@@ -131,13 +131,13 @@
                                     android:id="@+id/img_eye"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/icons8_casa_96"/>
+                                    android:src="@drawable/icons8_comentarios1_96"/>
                                 <TextView
                                     android:id="@+id/id_tv_body_comments"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="BodyComments"
-                                    android:textSize="12sp"
+                                    android:textSize="10sp"
                                     android:textStyle="bold"
                                     android:layout_toRightOf="@id/img_eye"
                                     android:layout_centerVertical="true"/>
@@ -150,13 +150,13 @@
                                     android:id="@+id/img_comment"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/icons8_conectar_desarrollar_96"/>
+                                    android:src="@drawable/icons8_ms_outlook_96"/>
                                 <TextView
                                     android:id="@+id/id_tv_email_comments"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Body"
-                                    android:textSize="12sp"
+                                    android:text="Email"
+                                    android:textSize="10sp"
                                     android:textStyle="bold"
                                     android:layout_toRightOf="@id/img_comment"
                                     android:layout_centerVertical="true"/>

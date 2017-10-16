@@ -4,6 +4,8 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,7 +26,7 @@ import org.json.JSONException;
 import java.io.IOException;
 import java.util.List;
 
-public class MainActivityComments extends AppCompatActivity {
+public class MainActivityComments extends AppCompatActivity{
 
     ProgressBar progressBarComments;
     RecyclerView recyclerViewComments;
@@ -92,10 +94,10 @@ public class MainActivityComments extends AppCompatActivity {
         protected String doInBackground(String... strings) {
             String content = null;
             try {
-                content = Connection.getData(strings[0]);
-            } catch (IOException e) {
+                    content = Connection.getData(strings[0]);
+                    } catch (IOException e) {
                 e.printStackTrace();
-            }
+                }
             return content;
         }
 
@@ -112,13 +114,13 @@ public class MainActivityComments extends AppCompatActivity {
 
             try {
                 CommentModelList = JsonComments.getData(s);
-            } catch (JSONException e) {
+                } catch (JSONException e) {
                 e.printStackTrace();
             }
 
             processData();
 
             progressBarComments.setVisibility(View.GONE);
+            }
         }
-    }
     }

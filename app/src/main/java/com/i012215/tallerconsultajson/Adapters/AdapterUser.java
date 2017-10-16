@@ -2,13 +2,17 @@ package com.i012215.tallerconsultajson.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+//import android.support.v7.app.AlertController;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerViewAccessibilityDelegate;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.i012215.tallerconsultajson.MainActivity;
+import com.i012215.tallerconsultajson.MainActivityComments;
 import com.i012215.tallerconsultajson.MainActivityPost;
 import com.i012215.tallerconsultajson.Models.ModelUser;
 import com.i012215.tallerconsultajson.R;
@@ -23,7 +27,6 @@ import java.util.List;
  */
 
 public class AdapterUser extends RecyclerView.Adapter<AdapterUser.ViewHolder> {
-
     List<ModelUser> userModelList = new ArrayList<>();
     Context context;
 
@@ -41,7 +44,6 @@ public class AdapterUser extends RecyclerView.Adapter<AdapterUser.ViewHolder> {
 
     @Override
     public void onBindViewHolder(AdapterUser.ViewHolder holder, int position) {
-
         holder.textViewUserId.setText(Integer.toString(userModelList.get(position).getId_user()));
         holder.textViewName.setText(userModelList.get(position).getName());
         holder.textViewUserName.setText(userModelList.get(position).getUsername());
@@ -61,26 +63,26 @@ public class AdapterUser extends RecyclerView.Adapter<AdapterUser.ViewHolder> {
         TextView textViewAddress;
         TextView textViewCompany;
 
-        public ViewHolder(View item) {
+        public ViewHolder(View item)
+        {
             super(item);
 
             item.setOnClickListener(this);
+
             textViewUserId = (TextView) item.findViewById(R.id.id_UserId);
             textViewName = (TextView) item.findViewById(R.id.id_tv_name);
             textViewUserName = (TextView) item.findViewById(R.id.id_tv_username);
             textViewAddress = (TextView) item.findViewById(R.id.tv_direccion);
             textViewCompany = (TextView) item.findViewById(R.id.tv_company);
-
         }
 
-
         @Override
-
-        public void onClick(View view) {
-            Context contextItem = view.getContext();
+        public void onClick(View v) {
+            Context context = v.getContext();
             Intent intent = new Intent(context, MainActivityPost.class);
             intent.putExtra("userId", userModelList.get(getLayoutPosition()).getId_user());
-            contextItem.startActivity(intent);
+            context.startActivity(intent);
+
         }
     }
 }
